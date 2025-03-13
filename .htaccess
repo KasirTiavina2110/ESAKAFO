@@ -1,0 +1,92 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^commande_controller/insertioncommande$ index.php?c=commande_controller&m=insertioncommande [L]
+
+RewriteRule ^commande_controller/update$ index.php?c=commande_controller&m=update [L]
+
+RewriteRule ^commande_controller/updatestatutpret/([0-9]+)$ index.php?c=commande_controller&m=updatestatutpret&idrestaurant=$1 [L]
+
+RewriteRule ^commande_controller/updatecommandereserver$ index.php?c=commande_controller&m=updatecommandereserver [L]
+
+RewriteRule ^commande_controller/updatecommanderecuperer$ index.php?c=commande_controller&m=updatecommanderecuperer [L]
+
+RewriteRule ^commande_controller/updatecommandelivrer$ index.php?c=commande_controller&m=updatecommandelivrer [L]
+
+RewriteRule ^commande_controller/listeLivraison$ index.php?c=commande_controller&m=listeLivraison [L]
+
+RewriteRule ^plat_controller/supprimer/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php?c=plat_controller&m=supprimer&idplat=$1&idrestaurant=$2 [L]
+
+RewriteRule ^commande_controller/suppression-de-donnee-([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php?c=commande_controller&m=supprimer&idcommande=$1&idclient=$2 [L]
+
+RewriteRule ^liste-commande-reserver$ index.php?c=commande_controller&m=listeReserver [L]
+
+RewriteRule ^liste-commande-pret$ index.php?c=commande_controller&m=listePret [L]
+
+RewriteRule ^liste-restaurant$ index.php?c=restaurant_controller&m=index [L]
+
+RewriteRule ^liste-commande-restaurant/([0-9]+)$ index.php?c=commande_controller&m=listeRestaurant&idrestaurant=$1 [L]
+
+RewriteRule ^liste-commande-client/([0-9]+)/([0-9]+)$ index.php?c=commande_controller&m=listeClient&idclient=$1&idrestaurant=$2 [L]
+
+RewriteRule ^liste-commande/$ index.php?c=commande_controller&m=listeEsakafo [L]
+
+RewriteRule ^plat_controller/update$ index.php?c=plat_controller&m=update [L]
+
+RewriteRule ^plat_controller/insertionplat$ index.php?c=plat_controller&m=insertionplat [L]
+
+RewriteRule ^liste-des-circuits-([0-9]+)$ index.php?c=circuit_controller&m=index&page=$1 [L]
+
+RewriteRule ^inscription_controller-client$ index.php?c=inscription_controller&m=index [L]
+
+RewriteRule ^plat_controller/restaurant-([a-zA-Z0-9]+)-([0-9]+)$ index.php?c=plat_controller&m=index&nomrestaurant=$1&idrestaurant=$2[L]
+
+RewriteRule ^single_controller/numero-plat-([0-9]+)$ index.php?c=single_controller&m=index&idplat=$1[L]
+
+RewriteRule ^r_controller/page_recherche$ index.php?c=r_controller&m=page_recherche [L]
+
+RewriteRule ^restaurant_controller/chiffreaffaire$ index.php?c=restaurant_controller&m=chiffreaffaire [L]
+
+RewriteRule ^r_controller/page_login$ index.php?c=r_controller&m=page_login [L]
+
+RewriteRule ^r_controller/page_inscription$ index.php?c=r_controller&m=page_inscription [L]
+
+RewriteRule ^single_controller/circuit/([0-9]+)$ index.php?c=single_controller&m=circuit&id=$1 [L]
+
+RewriteRule ^login_controller$ index.php?c=login_controller&m=index [L]
+
+RewriteRule ^login_controller/logout$ index.php?c=login_controller&m=logout [L]
+
+RewriteRule ^reservation_controller/insertion/([0-9]+)/([a-zA-Z0-9]+)$ index.php?c=reservation_controller&m=insertion&idCirc=$1&idCli=$2 [L]
+
+RewriteRule ^reservation_controller/admin$ index.php?c=reservation_controller&m=admin [L]
+
+RewriteRule ^reservation_controller/supprimer/([0-9]+)$ index.php?c=reservation_controller&m=supprimer&id=$1 [L]
+
+RewriteRule ^reservation_controller/update$ index.php?c=reservation_controller&m=update [L]
+
+RewriteRule ^reservation_controller/insertion$ index.php?c=reservation_controller&m=insertion_admin [L]
+
+RewriteRule ^client_controller/admin$ index.php?c=client_controller&m=admin [L]
+
+RewriteRule ^client_controller/supprimer/([a-zA-Z0-9]+)$ index.php?c=client_controller&m=supprimer&id=$1 [L]
+
+RewriteRule ^client_controller/update$ index.php?c=client_controller&m=update [L]
+
+RewriteRule ^client_controller/insertion$ index.php?c=client_controller&m=insertion [L]
+
+RewriteRule ^circuit_controller/supprimer/([a-zA-Z0-9]+)$ index.php?c=circuit_controller&m=supprimer&id=$1 [L]
+
+RewriteRule ^circuit_controller/admin$ index.php?c=circuit_controller&m=admin [L]
+
+RewriteRule ^circuit_controller/update$ index.php?c=circuit_controller&m=update [L]
+
+RewriteRule ^circuit_controller/insertion$ index.php?c=circuit_controller&m=insertion [L]
+
+RewriteRule ^export_controller/toPdf$ index.php?c=export_controller&m=toPdf [L]
+
+RewriteRule ^export_controller/toCsv$ index.php?c=export_controller&m=toCsv [L]
+
+RewriteRule ^wawa$ index.php?c=welcome&m=index [L]
